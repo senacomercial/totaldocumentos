@@ -420,35 +420,44 @@ img { max-width: 100%; display: block; }
 }
 
 .inpi-title {
-  font-size: clamp(36px, 4.5vw, 56px);
+  font-size: clamp(40px, 5vw, 64px);
   font-weight: 800;
   line-height: 1.05;
   margin-bottom: 20px;
+  color: var(--white);
 }
 .inpi-title em {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
-  color: var(--green-light);
+  color: rgba(255,255,255,.55);
+  display: block;
 }
 
 .inpi-desc {
   font-size: 15px;
   color: rgba(255,255,255,.7);
   line-height: 1.75;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
-.inpi-desc strong { color: var(--white); }
+.inpi-irrediavel {
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--white);
+}
 
 .inpi-quote {
-  font-size: 14px;
-  color: rgba(255,255,255,.55);
+  font-size: 16px;
+  font-family: var(--font-serif);
   font-style: italic;
-  line-height: 1.6;
-  padding-left: 16px;
-  border-left: 3px solid var(--green-main);
+  color: rgba(255,255,255,.8);
+  line-height: 1.65;
+  padding: 18px 20px;
+  background: #1e1e1e;
+  border-left: 3px solid var(--green-light);
+  border-radius: 0 10px 10px 0;
 }
-.inpi-quote strong { color: rgba(255,255,255,.85); }
 
 .risk-cards {
   display: grid;
@@ -457,13 +466,13 @@ img { max-width: 100%; display: block; }
 }
 
 .risk-card {
-  background: #242424;
-  border: 1px solid #333;
-  border-radius: 14px;
-  padding: 22px 20px;
+  background: #1c1c1c;
+  border: 1px solid #2a2a2a;
+  border-radius: 18px;
+  padding: 26px 22px;
   transition: border-color .2s;
 }
-.risk-card:hover { border-color: #555; }
+.risk-card:hover { border-color: #444; }
 
 .risk-icon {
   width: 36px;
@@ -474,17 +483,18 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   margin-bottom: 14px;
 }
-.risk-red    { background: rgba(239,68,68,.12); }
-.risk-yellow { background: rgba(245,158,11,.12); }
+.risk-red        { background: rgba(239,68,68,.12); }
+.risk-yellow     { background: rgba(245,158,11,.12); }
+.risk-green-icon { background: rgba(76,175,80,.12); }
 
 .risk-card h4 {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 .risk-card p {
-  font-size: 12px;
+  font-size: 13px;
   color: rgba(255,255,255,.55);
   line-height: 1.6;
 }
