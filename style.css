@@ -89,63 +89,109 @@ img { max-width: 100%; display: block; }
 .logo-brand {
   display: inline-flex;
   align-items: center;
-  gap: 0;
+  gap: 12px;
   text-decoration: none;
   flex-shrink: 0;
 }
-.lb-t, .lb-tal {
-  font-size: 21px;
-  font-weight: 800;
-  color: var(--dark);
+
+/* wordmark: t + icon + tal + ® */
+.lb-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
   line-height: 1;
-  letter-spacing: -.01em;
 }
-.lb-box {
-  width: 22px;
-  height: 22px;
-  background: var(--green-main);
-  border-radius: 5px;
+
+.lb-char {
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  color: var(--dark);
+  letter-spacing: -.03em;
+  line-height: 1;
+}
+
+/* the "o" icon */
+.lb-icon {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  background: #1b5c50;
+  border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
   margin: 0 1px;
+}
+.lb-icon-square {
+  width: 13px;
+  height: 13px;
+  background: var(--white);
+  border-radius: 1.5px;
+  display: block;
   flex-shrink: 0;
 }
-.lb-o {
-  font-size: 13px;
-  font-weight: 800;
-  color: var(--white);
+/* green triangle top-right corner */
+.lb-icon-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 0;
+  border-color: transparent #7bc142 transparent transparent;
+}
+
+/* registered trademark */
+.lb-reg {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--dark);
+  vertical-align: super;
+  margin-left: 1px;
   line-height: 1;
 }
+
+/* separator */
 .lb-sep {
   display: inline-block;
-  width: 1.5px;
-  height: 20px;
-  background: #d1d5db;
-  margin: 0 10px;
+  width: 1px;
+  height: 32px;
+  background: #c8c8c8;
   flex-shrink: 0;
 }
+
+/* DOCUMENTOS label */
 .lb-docs {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .15em;
-  color: var(--gray);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: .2em;
+  color: var(--dark);
   text-transform: uppercase;
 }
 
-/* logo white variant (footer) */
-.logo-brand-white .lb-t,
-.logo-brand-white .lb-tal { color: var(--white); }
+/* white variant (footer) */
+.logo-brand-white .lb-char { color: var(--white); }
+.logo-brand-white .lb-reg  { color: var(--white); }
 .lb-sep-white { background: rgba(255,255,255,.3); }
-.lb-docs-white { color: rgba(255,255,255,.5); }
+.lb-docs-white { color: rgba(255,255,255,.7); }
 
-/* logo small variant (report card) */
-.logo-brand-sm .lb-t,
-.logo-brand-sm .lb-tal { font-size: 14px; }
-.lb-box-sm { width: 15px; height: 15px; border-radius: 3px; }
-.lb-o-sm   { font-size: 9px; }
-.lb-sep-sm { height: 14px; margin: 0 6px; }
-.lb-docs-sm { font-size: 8px; letter-spacing: .1em; }
+/* small variant (report card) */
+.logo-brand-sm { gap: 6px; }
+.logo-brand-sm .lb-char { font-size: 16px; }
+.logo-brand-sm .lb-icon { width: 16px; height: 16px; border-radius: 2px; }
+.logo-brand-sm .lb-icon-square { width: 7px; height: 7px; }
+.logo-brand-sm .lb-icon-corner {
+  border-width: 0 6px 6px 0;
+}
+.logo-brand-sm .lb-reg { font-size: 7px; }
+.lb-sep-sm { height: 18px; }
+.lb-docs-sm { font-size: 8px; letter-spacing: .15em; }
 
 .nav-links {
   display: flex;
