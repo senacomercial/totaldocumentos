@@ -591,7 +591,7 @@ img { max-width: 100%; display: block; }
 
 /* ===== SEMÁFORO SECTION ===== */
 .semaforo-section {
-  background: #111;
+  background: #1a3d2b;
   color: var(--white);
   padding: 90px 0;
 }
@@ -606,13 +606,14 @@ img { max-width: 100%; display: block; }
 .semaforo-title {
   font-size: clamp(38px, 5vw, 60px);
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.1;
   margin-bottom: 20px;
+  color: var(--white);
 }
 .semaforo-title em {
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--green-light);
 }
 
