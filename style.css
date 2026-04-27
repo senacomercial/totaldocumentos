@@ -85,15 +85,67 @@ img { max-width: 100%; display: block; }
   height: 68px;
 }
 
-.logo {
-  display: flex;
-  align-items: baseline;
-  gap: 3px;
+/* ===== LOGO BRAND ===== */
+.logo-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
   flex-shrink: 0;
 }
-.logo-num   { font-size: 22px; font-weight: 800; color: var(--green-main); }
-.logo-total { font-size: 18px; font-weight: 700; color: var(--dark); letter-spacing: -.02em; }
-.logo-sub   { font-size: 9px; font-weight: 600; color: var(--gray); letter-spacing: .12em; text-transform: uppercase; margin-left: 2px; }
+.lb-t, .lb-tal {
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1;
+  letter-spacing: -.01em;
+}
+.lb-box {
+  width: 22px;
+  height: 22px;
+  background: var(--green-main);
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1px;
+  flex-shrink: 0;
+}
+.lb-o {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+}
+.lb-sep {
+  display: inline-block;
+  width: 1.5px;
+  height: 20px;
+  background: #d1d5db;
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+.lb-docs {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+
+/* logo white variant (footer) */
+.logo-brand-white .lb-t,
+.logo-brand-white .lb-tal { color: var(--white); }
+.lb-sep-white { background: rgba(255,255,255,.3); }
+.lb-docs-white { color: rgba(255,255,255,.5); }
+
+/* logo small variant (report card) */
+.logo-brand-sm .lb-t,
+.logo-brand-sm .lb-tal { font-size: 14px; }
+.lb-box-sm { width: 15px; height: 15px; border-radius: 3px; }
+.lb-o-sm   { font-size: 9px; }
+.lb-sep-sm { height: 14px; margin: 0 6px; }
+.lb-docs-sm { font-size: 8px; letter-spacing: .1em; }
 
 .nav-links {
   display: flex;
@@ -582,12 +634,8 @@ img { max-width: 100%; display: block; }
 
 .report-logo {
   display: flex;
-  align-items: baseline;
-  gap: 2px;
+  align-items: center;
 }
-.logo-num-sm   { font-size: 14px; font-weight: 800; color: var(--green-main); }
-.logo-total-sm { font-size: 12px; font-weight: 700; color: var(--dark); }
-.logo-sub-sm   { font-size: 7px; font-weight: 600; color: var(--gray); letter-spacing: .1em; margin-left: 2px; }
 
 .report-meta {
   text-align: right;
