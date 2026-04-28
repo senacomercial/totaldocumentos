@@ -937,23 +937,26 @@ img { max-width: 100%; display: block; }
 
 /* ===== CTA SECTION ===== */
 .cta-section {
-  background: var(--green-dark);
+  background: #1a3d2b;
   color: var(--white);
   padding: 90px 0;
   text-align: center;
 }
 
 .cta-title {
-  font-size: clamp(44px, 6vw, 72px);
-  font-weight: 800;
-  line-height: 1.05;
-  margin-bottom: 40px;
+  font-family: var(--font-serif);
+  font-size: clamp(52px, 7vw, 90px);
+  font-weight: 600;
+  line-height: 1.0;
+  margin-bottom: 48px;
+  color: var(--white);
 }
 .cta-title em {
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--green-light);
+  display: block;
 }
 
 .cta-buttons {
@@ -963,37 +966,31 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
 }
 
-.btn-cta-green {
+/* pill buttons */
+.btn-cta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 32px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-decoration: none;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.btn-cta-lime {
   background: var(--green-light);
-  color: var(--dark);
-  border: 2px solid var(--green-light);
-  padding: 16px 28px;
-  border-radius: 10px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: all .2s;
+  color: #1a2a1a;
 }
-.btn-cta-green:hover { background: #6db835; border-color: #6db835; }
+.btn-cta-lime:hover { background: #6db835; }
 
-.btn-cta-outline {
-  background: transparent;
-  color: var(--white);
-  border: 2px solid rgba(255,255,255,.4);
-  padding: 16px 28px;
-  border-radius: 10px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: all .2s;
+.btn-cta-white {
+  background: var(--white);
+  color: var(--dark);
 }
-.btn-cta-outline:hover { border-color: var(--white); }
+.btn-cta-white:hover { background: #f0f0f0; }
 
 /* ===== FOOTER ===== */
 .footer {
@@ -1085,5 +1082,5 @@ img { max-width: 100%; display: block; }
 @media (max-width: 560px) {
   .risk-cards { grid-template-columns: 1fr; }
   .cta-buttons { flex-direction: column; align-items: center; }
-  .btn-cta-green, .btn-cta-outline { width: 100%; justify-content: center; }
+  .btn-cta-pill { width: 100%; justify-content: center; }
 }
