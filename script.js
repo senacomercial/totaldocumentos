@@ -1,3 +1,31 @@
+// Meta CAPI + Pixel Lead event
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[.$?*|{}()[\]\\/+^]/g, '\\$&') + '=([^;]*)'));
+  return match ? decodeURIComponent(match[1]) : undefined;
+}
+
+function sendLeadEvent() {
+  const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 9);
+
+  // Browser pixel (client-side deduplication via event_id)
+  if (typeof fbq === 'function') {
+    fbq('track', 'Lead', {}, { eventID: eventId });
+  }
+
+  // Server-side via Cloudflare Worker (CAPI)
+  fetch('https://totaldocs-capi.agenciaacvip.workers.dev/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event_name: 'Lead',
+      event_id: eventId,
+      event_source_url: window.location.href,
+      fbc: getCookie('_fbc'),
+      fbp: getCookie('_fbp')
+    })
+  }).catch(() => {}); // fire-and-forget, don't block navigation
+}
+
 // FAQ accordion
 document.querySelectorAll('.faq-question').forEach(btn => {
   btn.addEventListener('click', () => {
