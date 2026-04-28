@@ -994,62 +994,55 @@ img { max-width: 100%; display: block; }
 
 /* ===== FOOTER ===== */
 .footer {
-  background: var(--black);
+  background: #0d0d0d;
   color: rgba(255,255,255,.6);
-  padding: 56px 0 0;
+  padding: 64px 0 0;
 }
 
 .footer-inner {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  gap: 48px;
-  align-items: start;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #222;
-}
-
-.logo-white .logo-num   { color: var(--green-light); }
-.logo-white .logo-total { color: var(--white); }
-.logo-white .logo-sub   { color: rgba(255,255,255,.4); }
-
-.footer-brand p {
-  font-size: 13px;
-  line-height: 1.7;
-  margin-top: 16px;
-  max-width: 260px;
-}
-
-.footer-links {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 28px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid #1e1e1e;
+  max-width: 480px;
 }
-.footer-links a {
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(255,255,255,.55);
-  transition: color .15s;
+
+.footer-desc {
+  font-size: 14px;
+  color: rgba(255,255,255,.45);
+  line-height: 1.75;
 }
-.footer-links a:hover { color: var(--white); }
 
 .footer-social {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   align-items: center;
 }
-.footer-social a {
-  color: rgba(255,255,255,.45);
-  transition: color .15s;
+.footer-social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.55);
+  transition: all .2s;
 }
-.footer-social a:hover { color: var(--white); }
+.footer-social-btn:hover {
+  border-color: rgba(255,255,255,.5);
+  color: var(--white);
+}
 
 .footer-bottom {
-  text-align: center;
-  padding: 20px 24px;
+  text-align: left;
+  padding: 20px 0;
 }
 .footer-bottom p {
-  font-size: 12px;
-  color: rgba(255,255,255,.3);
+  font-size: 11px;
+  color: rgba(255,255,255,.25);
+  letter-spacing: .1em;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1075,7 +1068,7 @@ img { max-width: 100%; display: block; }
   .metodo-card-full { flex-direction: column; }
   .metodo-card-03-deco { display: none; }
   .semaforo-inner { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; }
+  .footer-inner { max-width: 100%; }
   .footer-social { flex-wrap: wrap; }
 }
 
