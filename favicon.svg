@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- dark teal background square -->
+  <rect width="32" height="32" rx="6" fill="#1b5c50"/>
+  <!-- white inner square -->
+  <rect x="9" y="9" width="14" height="14" rx="2" fill="white"/>
+  <!-- lime green corner triangle -->
+  <polygon points="22,0 32,0 32,10" fill="#7bc142"/>
+</svg>
